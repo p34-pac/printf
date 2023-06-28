@@ -14,7 +14,7 @@
  */
 
 int prnt_usgn(va_list types, char buffer[],
-	int flags, int width, int precise, int sizes)
+int flags, int width, int precise, int sizes)
 {
 	int i = BUFF_SIZE - 2;
 	unsigned long int num = va_arg(types, unsigned long int);
@@ -41,7 +41,7 @@ int prnt_usgn(va_list types, char buffer[],
 
 /**
  * prnt_octal - prints an unsingned number in octal notation
- * types: list a of arguments
+ * @types: list a of arguments
  * @buffer: buffer array to handle print
  * @flags: calculates active flags
  * @width: get width
