@@ -3,7 +3,7 @@
 /********************** Print unsigned number ***************/
 
 /**
- * print_unsigned - prints an unsigned number
+ * prnt_usgn - prints an unsigned number
  * @types: list a of arguments
  * @buffer: buffer array to handle print
  * @flags: calculates active flags
@@ -13,7 +13,7 @@
  * Rwturn: Number of chars printed.
  */
 
-int print_unsigned(va_list types, char buffer[], int flags, int width, int precise, int sizes)
+int prnt_usgn(va_list types, char buffer[], int flags, int width, int precise, int sizes)
 {
 	int i = BUFF_SIZE - 2;
 	unsigned long int num = va_arg(types, unsigned long int);
@@ -39,7 +39,7 @@ int print_unsigned(va_list types, char buffer[], int flags, int width, int preci
 /********* Print unsigned Number in octal ***************************/
 
 /**
- * print_octal - prints an unsingned number in octal notation
+ * prnt_octal - prints an unsingned number in octal notation
  * types: list a of arguments
  * @buffer: buffer array to handle print
  * @flags: calculates active flags
@@ -48,7 +48,7 @@ int print_unsigned(va_list types, char buffer[], int flags, int width, int preci
  * @sizes: sizes specifier
  * Return: Number of chars printed
  */
-int print_octal(va_list types, char buffer[], int flags, int width, int precise, int sizes)
+int prnt_octal(va_list types, char buffer[], int flags, int width, int precise, int sizes)
 {
 
 	int i = BUFF_SIZE - 2;
@@ -61,7 +61,7 @@ int print_octal(va_list types, char buffer[], int flags, int width, int precise,
 
 	if (num == 0)
 		buffer[i--] = '0';
-	buffer[BUFF_SIZE -1] = '\0';
+	buffer[BUFF_SIZE - 1] = '\0';
 
 	while (num > 0)
 	{
@@ -79,7 +79,7 @@ int print_octal(va_list types, char buffer[], int flags, int width, int precise,
 
 /************ Print Unsigned number in hex **********/
 /**
- * print_hexadecimal_func - prints an unsigned number in hexadecimal notation
+ * prnt_hexadec - prints an unsigned number in hexadecimal notation
  * @types: list a of argumants
  * @buffer: buffer array to handle print
  * @flags: calculates active flags
@@ -89,14 +89,14 @@ int print_octal(va_list types, char buffer[], int flags, int width, int precise,
  * Return: Number of chars printed
  */
 
-int print_hexadecimal_func(va_list types, char buffer[], int flags, int width, int precise, int sizes)
+int prnt_hexadec(va_list types, char buffer[], int flags, int width, int precise, int sizes)
 {
-	return (print_hexa(types, "0123456789abcdef", buffer, flags, 'x', width, precise, sizes));
+	return (prnt_hexa(types, "0123456789abcdef", buffer, flags, 'x', width, precise, sizes));
 }
 
 /************* PRINT UNSIGNED NUMBER IN UPPER HEXADECIMAL **************/
 /**
- * print_hexa_upper - Prints an unsigned number in upper hexadecimal notation
+ * prnt_hexa_upper - Prints an unsigned number in upper hexadecimal notation
  * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -105,16 +105,16 @@ int print_hexadecimal_func(va_list types, char buffer[], int flags, int width, i
  * @sizes: sizes specifier
  * Return: Number of chars printed
  */
-int print_hexa_upper(va_list types, char buffer[],
+int prnt_hexa_upper(va_list types, char buffer[],
 	int flags, int width, int precise, int sizes)
 {
-	return (print_hexa(types, "0123456789ABCDEF", buffer,
+	return (prnt_hexa(types, "0123456789ABCDEF", buffer,
 		flags, 'X', width, precise, sizes));
 }
 
 /************** PRINT HEXX NUM IN LOWER OR UPPER **************/
 /**
- * print_hexa - Prints a hexadecimal number in lower or upper
+ * prnt_hexa - Prints a hexadecimal number in lower or upper
  * @types: Lista of arguments
  * @map_to: Array of values to map the number to
  * @buffer: Buffer array to handle print
@@ -126,7 +126,7 @@ int print_hexa_upper(va_list types, char buffer[],
  * @sizes: sizes specification
  * Return: Number of chars printed
  */
-int print_hexa(va_list types, char map_to[], char buffer[],
+int prnt_hexa(va_list types, char map_to[], char buffer[],
 	int flags, char flag_ch, int width, int precise, int sizes)
 {
 	int i = BUFF_SIZE - 2;
