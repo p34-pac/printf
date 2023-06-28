@@ -13,7 +13,8 @@
  * Rwturn: Number of chars printed.
  */
 
-int prnt_usgn(va_list types, char buffer[], int flags, int width, int precise, int sizes)
+int prnt_usgn(va_list types, char buffer[],
+	int flags, int width, int precise, int sizes)
 {
 	int i = BUFF_SIZE - 2;
 	unsigned long int num = va_arg(types, unsigned long int);
@@ -36,7 +37,7 @@ int prnt_usgn(va_list types, char buffer[], int flags, int width, int precise, i
 	return (write_unsigned_num(0, i, buffer, flags, width, precise, sizes));
 }
 
-/********* Print unsigned Number in octal ***************************/
+/********* Print unsigned Number in octal ***********/
 
 /**
  * prnt_octal - prints an unsingned number in octal notation
@@ -46,9 +47,10 @@ int prnt_usgn(va_list types, char buffer[], int flags, int width, int precise, i
  * @width: get width
  * @precise: precise specification
  * @sizes: sizes specifier
- * Return: Number of chars printed
- */
-int prnt_octal(va_list types, char buffer[], int flags, int width, int precise, int sizes)
+ * Return: Number of chars printed.
+*/
+int prnt_octal(va_list types, char buffer[], int flags,
+ int width, int precise, int sizes)
 {
 
 	int i = BUFF_SIZE - 2;
@@ -86,10 +88,11 @@ int prnt_octal(va_list types, char buffer[], int flags, int width, int precise, 
  * @width: get width
  * @precise: precise specs
  * @sizes: sizes specifier
- * Return: Number of chars printed
- */
+ * Return: Number of chars printed.
+*/
 
-int prnt_hexadec(va_list types, char buffer[], int flags, int width, int precise, int sizes)
+int prnt_hexadec(va_list types, char buffer[], int flags,
+ int width, int precise, int sizes)
 {
 	return (prnt_hexa(types, "0123456789abcdef", buffer, flags, 'x', width, precise, sizes));
 }
