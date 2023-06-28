@@ -10,7 +10,7 @@
  * @width: get width
  * @precise: precise specs
  * @sizes: sizes spec
- * Rwturn: Number of chars printed.
+ * Return: Number of chars printed.
  */
 
 int prnt_usgn(va_list types, char buffer[],
