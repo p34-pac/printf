@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			print_buffer(buffer, &buff_ind);
-			flags = get_flags(format, &i);
+			flags = get_flag(format, &i);
 			width = get_width(format, &i, list);
 			precise = get_precise(format, &i, list);
 			sizes = get_size(format, &i);
