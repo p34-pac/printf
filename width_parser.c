@@ -35,8 +35,6 @@ int get_width(const char *format, int *i, va_list list)
 	return (width);
 }
 
-// #include "main.h"
-
 /**
  * get_flags - Calculates active flags
  * @format: Formatted string in which to print the arguments
