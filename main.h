@@ -115,5 +115,3 @@ long int convert_size_number(long int num, int sizes);
 long int convert_size_unsgnd(unsigned long int num, int sizes);
 
 #endif /* MAIN_H */
-
-

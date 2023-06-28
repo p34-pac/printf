@@ -40,4 +40,3 @@ int get_precise(const char *format, int *i, va_list list)
 
 	return (precise);
 }
-
